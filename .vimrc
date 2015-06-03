@@ -13,6 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
+Plugin 'mattn/emmet-vim'
  
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
