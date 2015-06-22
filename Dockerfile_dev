@@ -41,6 +41,7 @@ RUN git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ADD . /src
 RUN cp /src/.vimrc ~/
 RUN vim +PluginInstall +qall now
+RUN echo 'colorscheme PaperColor' >> ~/.vimrc
 
 # work folder
 # ADD app/ $WORK_DIR/ # can use it on production

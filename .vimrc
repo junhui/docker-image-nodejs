@@ -14,11 +14,13 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'mattn/emmet-vim'
+Plugin 'NLKNguyen/papercolor-theme'
  
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
  
+set t_Co=256
 let g:syntastic_javascript_checkers = ['jshint']
  
 set paste
@@ -42,3 +44,4 @@ set expandtab
 set backspace=indent,eol,start
 set clipboard+=unnamed
 autocmd BufWritePre * :Autoformat
+
