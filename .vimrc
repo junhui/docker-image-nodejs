@@ -14,8 +14,11 @@ Plugin 'jelera/vim-javascript-syntax'
 Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'mattn/emmet-vim'
-Plugin 'NLKNguyen/papercolor-theme'
- 
+Plugin 'altercation/vim-colors-solarized'
+" Plugin 'Valloric/YouCompleteMe'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -23,10 +26,10 @@ filetype plugin indent on    " required
 set t_Co=256
 let g:syntastic_javascript_checkers = ['jshint']
  
-set paste
+"set paste
 set linespace=0
-set nobackup
-set noswapfile
+"set nobackup
+"set noswapfile
 set ignorecase
 syntax enable
 set number  
@@ -42,6 +45,26 @@ set autoindent
 set smarttab
 set expandtab
 set backspace=indent,eol,start
-set clipboard+=unnamed
+set clipboard=unnamed
 autocmd BufWritePre * :Autoformat
+set relativenumber
+
+autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+" let g:solarized_termcolors=256
+set background=dark
+" colorscheme solarized
+
+
+" " YouCompleteMe {
+" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+" let g:ycm_filetype_blacklist = {}
+" let g:SuperTabDefaultCompletionType = '<C-n>'
+" " }
+" 
+" " UltiSnips {
+" let g:UltiSnipsExpandTrigger = "<tab>"
+" let g:UltiSnipsJumpForwardTrigger = "<tab>"
+" let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" " }
 
