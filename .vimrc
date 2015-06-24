@@ -10,12 +10,13 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
  
+Plugin 'scrooloose/nerdtree'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'scrooloose/syntastic'
 Plugin 'Chiel92/vim-autoformat'
-Plugin 'mattn/emmet-vim'
+" Plugin 'mattn/emmet-vim'
 Plugin 'altercation/vim-colors-solarized'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 
@@ -50,21 +51,27 @@ autocmd BufWritePre * :Autoformat
 set relativenumber
 
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
-" let g:solarized_termcolors=256
+let g:solarized_termcolors=256
 set background=dark
-" colorscheme solarized
+colorscheme solarized
 
+let mapleader=","
+let maplocalleader=","
 
-" " YouCompleteMe {
-" let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-" let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-" let g:ycm_filetype_blacklist = {}
-" let g:SuperTabDefaultCompletionType = '<C-n>'
-" " }
-" 
-" " UltiSnips {
-" let g:UltiSnipsExpandTrigger = "<tab>"
-" let g:UltiSnipsJumpForwardTrigger = "<tab>"
-" let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-" " }
+" YouCompleteMe {
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:ycm_filetype_blacklist = {}
+let g:SuperTabDefaultCompletionType = '<C-n>'
+" }
 
+" UltiSnips {
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" }
+
+set list listchars=tab:→\ ,trail:·
+set backupdir=~/tmp
+
+nnoremap <Leader>tt :NERDTreeToggle<CR>
