@@ -12,7 +12,7 @@ zshPlugins="plugins=(git zsh-syntax-highlighting)"
 
 echo "Updating ~/.zshrc to make zsh support syntax highlighting"
 if grep 'plugins=' ~/.zshrc >/dev/null; then
-  sudo sed -i "s/^.*plugins=(.*\$/$zshPlugins/" ~/.zshrc
+  sudo sed -i "s/^plugins=(.*\$/$zshPlugins/" ~/.zshrc
 else
   sudo sh -c "echo '$zshPlugins' >> ~/.zshrc"
 fi
@@ -31,5 +31,5 @@ git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git
  
 git clone https://github.com/seebi/tmux-colors-solarized.git
 echo "
-set -g default-terminal \"screen-256color-bce\"
-source ~/.solarized/tmux-colors-solarized/tmuxcolors.conf" >> ~/.tmux.conf
+set -g default-terminal \"screen-256color\"
+source ~/.solarized/tmux-colors-solarized/tmuxcolors-dark.conf" >> ~/.tmux.conf
